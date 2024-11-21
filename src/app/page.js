@@ -47,7 +47,7 @@ export default function Home() {
               <textarea
                 rows="6"
                 cols="50"
-                placeholder='Enter JSON input '
+                placeholder='Enter JSON input eg. {"data": ["A",”C”,”Z”,”c”,”i”]}'
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 className="border border-black rounded-lg p-4"
