@@ -15,6 +15,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       setError("");
       setResponseData(null);
 
@@ -29,6 +30,9 @@ export default function Home() {
     } catch (err) {
       console.log("ERORR: ",err)
       setError("Invalid JSON or API error.");
+    }
+    finally{
+      setLoading(false);
     }
   };
     
@@ -48,7 +52,11 @@ export default function Home() {
                 onChange={(e) => setJsonInput(e.target.value)}
                 className="border border-black rounded-lg p-4"
               />
-               <button className="flex bg-blue-700 px-4 py-2 w-fit mt-4 rounded-lg">Submit</button>
+               <button className="flex bg-blue-700 px-4 py-2 w-fit mt-4 rounded-lg" disabled={loading}>
+                {
+                  loading?"Please Wait...":"Submit"
+                }
+              </button>
           </form>
           {error && <p className="text-red-700">{error}</p>}
         </div>
