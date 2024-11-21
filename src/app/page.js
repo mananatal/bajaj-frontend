@@ -52,7 +52,7 @@ export default function Home() {
                 onChange={(e) => setJsonInput(e.target.value)}
                 className="border border-black rounded-lg p-4"
               />
-               <button className="flex bg-blue-700 px-4 py-2 w-fit mt-4 rounded-lg" disabled={loading}>
+               <button className="flex bg-blue-700 px-4 py-2 w-fit mt-4 rounded-lg text-white" disabled={loading}>
                 {
                   loading?"Please Wait...":"Submit"
                 }
