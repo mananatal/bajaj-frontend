@@ -31,28 +31,6 @@ export default function Home() {
     }
   };
     
-  const renderFilteredResponse = () => {
-    if (!responseData || selectedOptions.length === 0) return null;
-
-    const filteredData = {};
-    if (selectedOptions.includes("Alphabets")){
-      filteredData["Alphabets"] = responseData.alphabets;
-    } 
-    if (selectedOptions.includes("Numbers")){
-      filteredData["Numbers"] = responseData.numbers;
-    } 
-    if (selectedOptions.includes("Highest Lowercase Alphabet")){
-      filteredData["Highest Lowercase Alphabet"] = responseData.highest_lowercase_alphabet;
-    }
-      
-
-    return (
-      <div>
-        <h3>Filtered Response:</h3>
-        <pre>{JSON.stringify(filteredData, null, 2)}</pre>
-      </div>
-    );
-  };
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
