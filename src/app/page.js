@@ -23,7 +23,7 @@ export default function Home() {
         throw new Error('Key "data" must be an array.');
       }
 
-      const response = await axios.post("http://localhost:8000/bfhl", { data: parsedInput.data });
+      const response = await axios.post("https://bajaj-backend-xwco.onrender.com/bfhl", { data: parsedInput.data });
       setResponseData(response.data);
     } catch (err) {
       console.log("ERORR: ",err)
