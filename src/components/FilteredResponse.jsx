@@ -11,7 +11,7 @@ function FilteredResponse({responseData,selectedOptions}) {
       filteredData["Numbers"] = responseData.numbers;
     } 
     if (selectedOptions.includes("Highest Lowercase Alphabet")){
-      filteredData["Highest Lowercase Alphabet"] = responseData.highest_lowercase_alphabet;
+      filteredData["Highest Lowercase Alphabet"] = responseData.highest_lowercase;
     }
       console.log("FILTERED DATA: ",filteredData)
 
